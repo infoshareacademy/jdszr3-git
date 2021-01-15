@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<team name="{your team name}">
+   <version>{your file version}</version>
+   <members>
+       <member name="{your name}" surname="{your surname}">{nick}</member>
+   </members>
+</team>
