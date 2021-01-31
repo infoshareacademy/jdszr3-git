@@ -77,3 +77,46 @@ Z tym wiąże się ryzyko, że jeżeli przepniemy HEAD na inny branch/kommit, na
 
 - `git checkout ab123xyz` - przechodzi na kommit z ID, zaczynającym się od `ab123xyz`
 - Przypominajka: `git checkout -b feature/some-fix` - tworzy nowy branch i "przepina" na niego HEAD. Jest to najprostszy sposób zabezpieczyć swoją pracę.
+
+
+## III. Podstawy pracy ze zdalnym repozytorium
+
+- Git != GitHub
+- można pracować na zdalnym repo w pojedynkę
+- GitHub służy do wymiany danymi, ale nie jest on "lepszy" od zwykłego członka zespołu - jest takim samym 
+
+### podstawowe komendy - pobieranie / wiązanie repozytorium (robimy 1 raz per repo)
+
+**Ważne**: z dwóch poniższych poleceń robimy zwykle jedno - albo git init, albo git clone.
+
+Init + remote add origin - kiedy tworzymy nowe repo lokalnie (rzadko)
+
+Clone - kiedy chcemy, aby na naszym lokalnym urządzeniu pojawiło się już istniejące, wcześniej stworzone repo.
+
+- `git clone git@github.com:mojaorganizacja/mojerepo.git` - tworzy katalog o nazwie `mojerepo` i kopiuje tam zdalne repozytorium. Robimy **ZAMIAST** `git init`. Istotna różnica - na odmianę od `git init` tworzy nowy katalog, zamiast tworzyć repo w bieżącym.
+- `git remote add origin git@github.com:mojaorganizacja/mojerepo.git` - "wiąże lokalne i zdalne repozytorium". Robimy **PO WCZEŚNIEJSZYM** `git init`. Używane raczej rzadko.
+
+### zadanie 3.1 - klonowanie zdalnego repo
+Pobierz zdalne repozytorium z GitHub, używając polecenia Git clone.
+
+### podstawowe komendy - wymiana danymi ze zdalnym repo (robimy często)
+- `git push` - "wrzuca / wypycha" nasze na repo zdalne
+- `git pull` - "zaciąga / pobiera" zmiany ze zdalnego repo i aktualizuje bieżący branch / HEAD
+- `git fetch` - "zaciąga / pobiera" zmiany ze zdalnego repo bez  aktualizacji bieżącego branch / HEAD
+- `git push origin --set-upstream feature/my-branch`, lub `git push origin -u feature/my-branch`, lub `git push origin -u HEAD` (jeżeli HEAD = feature/my-branch)
+
+### Zadanie 3.2 - pobieranie zmian od trenera
+- Na gałęzi `master` dokonaj jakichś zmian w pliku `book.txt`.
+- Spróbuj pobrać zmiany od trenera ze zdalnego repo (`git pull`)
+- Zobacz, że jest błąd, ponieważ zmiany kolidują
+- Odrzuć lokalne zmiany (`git reset --hard`). **Uwaga** - to polecenie usuwa zmiany bez możliwości powrotu. Jeżeli chcesz je zachować - zrób nowy branch i stwórz na nim kommit.
+- Ponownie zrób `git pull`
+
+### Zadanie 3.3 - "wypchnięcie lokalnego branch"
+- Zrób branch `feature/zadanie-3.3-nazwisko`
+- Zrób na tym branch nowy plik o nazwie `zadanie-3.3-nazwisko.txt`
+- Zrób `git push`, zaobserwuj błąd
+- Zrób `git push origin -u feature/zadanie-3.3-nazwisko` (pilnuj poprawności nazwy branch), lub `git push origin -u HEAD` (pro-tip, żeby mniej wpisywać :) )
+- Zaobserwuj, że na GitHub pojawił się nowy branch
+
+
