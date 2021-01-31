@@ -5,3 +5,7 @@ Geralt poznaje tajemnice Git'a.
 Rozdział 2.
 
 Geralt uczy się pracować z gałęziami.
+
+Rozdział 3.
+
+rozdział powstał na potrzeby demonstracji `git push`.
