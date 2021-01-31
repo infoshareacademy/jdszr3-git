@@ -63,7 +63,8 @@ zakommituj go (pamiętaj o `git add` *PRZED commitem*)
 
 ### Zadanie 2.1
 - Stwórz plik book.txt, wprowadź w nim jakiś tekst, może być 1. rozdział książki o Git, zakommituj plik (`git add .`, potem `git commit`)
-Stwórz nowy branch o nazwie `feature/nazwisko-chapter-2` (`git checkout -b feature/nazwisko-chapter-2`) i dodaj tam kommit.
+- Stwórz nowy branch o nazwie `feature/nazwisko-chapter-2` (`git checkout -b feature/nazwisko-chapter-2`) i dodaj tam kommit.
+
 W wyniku zadania na tym branchu powinno być o 1+ kommit więcej, niż na `master`.
 Upewnić się możesz za pomocą `git log --oneline`.
 Po zrobieniu kommit użyj polecenia `git checkout master` (zauważ brak modyfikatora `-b`, który tworzy nowy branch) i zobacz, że plik wrócił do poprzedniej wersji. Spróbuj przełączyć się pomiędzy branch'ami kilka razy.
