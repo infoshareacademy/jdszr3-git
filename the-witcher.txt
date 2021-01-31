@@ -1,6 +1,6 @@
 Rozdział 1.
 
-Geralt poznaje tajniki Git'a.
+Geralt poznaje tajemnice Git'a.
 
 Rozdział 2.
 
