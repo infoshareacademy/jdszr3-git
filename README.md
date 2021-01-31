@@ -11,7 +11,7 @@
 ### Zadanie 1.0
 Ustaw powyższe wartości domyślne, jeżeli nie zrobiłeś tego podczas prework. Nie jesteś pewien? Sprawdź za pomocą `git config --list`
 
-## Podstawowe komendy
+## I. Podstawowe komendy
 
 ### Zakładanie repozytorium (robimy 1 raz per repo)
 - `git init` - tworzy puste nowe repozytorium w working directory. (sprawdzić go możemy poleceniem `pwd` - present working directory)
@@ -49,12 +49,27 @@ zakommituj go (pamiętaj o `git add` *PRZED commitem*)
 #### Wizualizacja procesu komitowania i `areas` w Git:
 ![git 3 areas example](https://snipcademy.com/img/articles/git-fundamentals/three-stages-01.svg)
 
-### branches - podstawowe komendy
+### II. Branches
+
+#### Czym są i po co są potrzebne branche.
+
+#### Branches - podstawowe komendy
+
 - `git branch` - sprawdź lokalne branche oraz aktywny branch
 - `git branch -A ` - sprawdź wszystkie branche, w tym zdalne (będzie bardziej potrzebne w dniu 2.)
 - `git branch my-new-branch` - tworzy branch o nazwie `my-new-branch`, z taką samą historią, jak obecny HEAD
 - `git checkout my-other-branch` - przełącza HEAD na ostatni kommit brancha `my-other-branch`
-- `git checkout -b my-third-branch` - połączenie dwóch powyższych. Tworzy nowy branch oraz "przechodzi na niego" (zmienia HEAD)
+- `git checkout -b my-third-branch` - połączenie dwóch powyższych komend. Tworzy nowy branch oraz "przechodzi na niego" (zmienia HEAD)
 
-### zadanie 1.2
-Stwórz nowy branch o nazwie `feature/moje-nazwisko-chapter-2` i dodaj tam kommit. W wyniku zadania na tym branchu powinno być o 1+ kommit więcej, niż na `master`
+### Zadanie 2.1
+- Stwórz plik book.txt, wprowadź w nim jakiś tekst, może być 1. rozdział książki o Git, zakommituj plik
+Stwórz nowy branch o nazwie `feature/moje-nazwisko-chapter-2` i dodaj tam kommit. W wyniku zadania na tym branchu powinno być o 1+ kommit więcej, niż na `master`. Upewnić się możesz za pomocą `git log --oneline`.
+
+#### Detached HEAD
+
+Występuje wtedy, kiedy HEAD nie wskazuje na branch, a wskazuje na kommit.
+Wtedy, podczas tworzenia nowego commita, na niego nie będzie wskazywać żadny branch.
+Z tym wiąże się ryzyko, że jeżeli przepniemy HEAD na inny branch/kommit, nasz nowy kommit, zrobiony w trybie detached HEAD będzie stracony.
+
+- `git checkout ab123xyz` - przechodzi na kommit z ID, zaczynającym się od `ab123xyz`
+- Przypominajka: `git checkout -b feature/some-fix` - tworzy nowy branch i "przepina" na niego HEAD. Jest to najprostszy sposób zabezpieczyć swoją pracę.
