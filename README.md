@@ -68,13 +68,27 @@ Clone - kiedy chcemy, aby na naszym lokalnym urządzeniu pojawiło się już ist
 - `git clone git@github.com:mojaorganizacja/mojerepo.git` - tworzy katalog o nazwie `mojerepo` i kopiuje tam zdalne repozytorium. Robimy **ZAMIAST** `git init`. Istotna różnica - na odmianę od `git init` tworzy nowy katalog, zamiast tworzyć repo w bieżącym.
 - `git remote add origin git@github.com:mojaorganizacja/mojerepo.git` - "wiąże lokalne i zdalne repozytorium". Robimy **PO WCZEŚNIEJSZYM** `git init`. Używane raczej rzadko.
 
+### zadanie 3.1 - klonowanie zdalnego repo
+Pobierz zdalne repozytorium z GitHub, używając polecenia Git clone.
+
 ### podstawowe komendy - wymiana danymi ze zdalnym repo (robimy często)
 - `git push` - "wrzuca / wypycha" nasze na repo zdalne
 - `git pull` - "zaciąga / pobiera" zmiany ze zdalnego repo i aktualizuje bieżący branch / HEAD
 - `git fetch` - "zaciąga / pobiera" zmiany ze zdalnego repo bez  aktualizacji bieżącego branch / HEAD
 - `git push origin --set-upstream feature/my-branch`, lub `git push origin -u feature/my-branch`, lub `git push origin -u HEAD` (jeżeli HEAD = feature/my-branch)
 
-### zadanie 3.1
-Pobierz zdalne repozytorium z GitHub, używając polecenia Git clone.
+### Zadanie 3.2 - pobieranie zmian od trenera
+- Na gałęzi `master` dokonaj jakichś zmian w pliku `book.txt`.
+- Spróbuj pobrać zmiany od trenera ze zdalnego repo (`git pull`)
+- Zobacz, że jest błąd, ponieważ zmiany kolidują
+- Odrzuć lokalne zmiany (`git reset --hard`). **Uwaga** - to polecenie usuwa zmiany bez możliwości powrotu. Jeżeli chcesz je zachować - zrób nowy branch i stwórz na nim kommit.
+- Ponownie zrób `git pull`
+
+### Zadanie 3.3 - "wypchnięcie lokalnego branch"
+- Zrób branch `feature/zadanie-3.3-nazwisko`
+- Zrób na tym branch nowy plik o nazwie `zadanie-3.3-nazwisko.txt`
+- Zrób `git push`, zaobserwuj błąd
+- Zrób `git push origin -u feature/zadanie-3.3-nazwisko` (pilnuj poprawności nazwy branch), lub `git push origin -u HEAD` (pro-tip, żeby mniej wpisywać :) )
+- Zaobserwuj, że na GitHub pojawił się nowy branch
 
 
