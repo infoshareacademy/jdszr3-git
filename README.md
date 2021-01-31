@@ -1,55 +1,51 @@
-# Git - ćwiczenie grupowe
-# Przedstaw się!
-Celem ćwiczenia jest zbudowanie całą drużyną pliku .xml który zawiera podstawowe informacje o was.
+# JDSZR3-Git - część 1
 
-## Plik
+## Historia
 
-Każda drużyna tworzy jeden plik - odpowiednio `<nazwa-teamu>.xml`.
+## Konfiguracja środowiska (dla tych, którzy nie zrobili tego w prework)
+1. git config --global user.name "First name and lastname"
+1. git config --global user.email "example@example.com"
+1. git config --global credential.helper "cache --timeout=3600"
+1. git config --global core.editor "code --wait"
 
-Przykładowo: team o nazwie `SzybkieBizony` tworzy plik o nazwie `szybkie-bizony.xml`. 
+### Zadanie 1.0
+Ustaw powyższe wartości domyślne, jeżeli nie zrobiłeś tego podczas prework. Nie jesteś pewien? Sprawdź za pomocą `git config --list`
 
+## Podstawowe komendy
 
-### Plik jest w formacie:
+### Zakładanie repozytorium (robimy 1 raz per repo)
+- `git init` - tworzy puste nowe repozytorium w working directory. (sprawdzić go możemy poleceniem `pwd` - present working directory)
 
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<team name="{your team name}">
-    <version>{your file version}</version>
-    <members>
-        <member name="{your name}" surname="{your surname}">{how to call you}</member>
-    </members>
-</team>
-```
+### Sprawdzanie "na czym stoimy" (robimy często)
+- `git status` - sprawdza "na czym stoimy" - pokazuje oraz zmienione pliki oraz czy są one dodane do staging area
+- `git diff` - to samo co git status, ale pokazuje zmiany w zawartości plików
+- `git log` - sprawdzenie listy kommitów
+- `git log --oneline` - sprawdzenie kommitów w krótszy, bardziej przejrzysty sposób
 
-### Przykładowe uzupełnienie pliku:
+### Tworzenie kommitów
+- `git add myfile.txt` - dodaje plik `myfile.txt` do staging area
+- `git add .` / `git add -A` - dodaje wszystkie zmiany do staging area (robi je zielonymi)
+- `git commit -m "Add users page to website"` - tworzy kommit z wiadomością `Add users page to website`. Ważne jest, aby w treści kommita pisać *sensowne rzeczy*, które opisują co zrobiliśmy. Najlepiej - pisać, PO CO są te zmiany lub "CO robią", gorzej - JAKIE są to zmiany, najgorzej - kommit nic nie wnoszący (some changes / minor bugfix / new improvements)
 
-```xml
-<?xml version="1.0" encoding="utf-8" ?>
-<team name="ISA-MM-1">
-    <version>3</version>
-    <members>
-        <member name="Michał" surname="Michalczuk">Michał</member>
-        <member name="Agata" surname="Agatowska">Aga</member>
-        <member name="Maciej" surname="Kowalski">Macias</member>
-    </members>
-</team>
+### Zadanie 1.1
+*WAŻNE:*
+W nazwach plików, folderów oraz później gałęzi (branches) warto unikać spacji oraz znaków innych niż te z alfabetu łacińskiego. Są na to 2 powody:
+- znacznie ułatwia to życie podczas pracy w terminalu
+- "tak się w programowaniu robi" (konwencja)
 
-```
+Przykład:
+- zamiast "mój nowy plik.txt" -> my-new-file.txt (brak spacji i polskich znaków)
+- zamiast "MyNewFile.txt" -> my-new-file.txt (zamiast dużych liter - same małe i myślniki jako spacje)
 
-## Zadanie
-Waszym zadaniem jest uzupełnić ten plik. Ale jest parę reguł:
-* każdy może dodać tylko swoje dane - tj autor commita musi się pokrywać z dodaną osobą
-* każda zmiana składu musi być w oddzielnym commicie
-* jeśli plik się zmienia (poprzez commit) należy podnieść wersję pliku o 1 - na początku jest 1
-* gotowy plik można wrzucić do brancha `master` tylko przez `Pull Request` na GitHub'ie !
-* branch zespołu powinien się nazywać `hello-nazwa-zespolu`
+#### Przebieg zadania
+- Stwórz (init) lokalne repozytoium *(pamiętaj o założeniu nowego katalogu i "przejściu" (polecenie `cd nazwa-katalogu`) do niego!)*
+- sprawdź `git status`
+- stwórz plik `hello-world.txt` z tekstem `Witaj świecie!`
+- sprawdź `git status` i `git diff`
+zakommituj go (pamiętaj o `git add` *PRZED commitem*)
+- sprawdź `git status` i `git diff`
+- sprawdź `git log` lub `git log --oneline`
 
-### Ćwiczenie A)
-Wybierzcie czy chcecie pracować na jednym branchu, czy założyć wiele (per user) i wpiszcie członków drużyny wg powyższych reguł.
+#### Wizualizacja procesu komitowania i `areas` w Git:
+![git 3 areas example](https://snipcademy.com/img/articles/git-fundamentals/three-stages-01.svg)
 
-Które rozwiązanie jest dla was lepsze? Jakie problemy napotkaliście?
-
-### Ćwiczenie B)
-Wystawcie **jednego** `Pull Requesta` do repozytorium, do brancha master z danymi waszej drużyny.
-
-Pull requesty sprawdzimy wspólnie na koniec i je zmergujemy.
