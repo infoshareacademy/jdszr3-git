@@ -1,3 +1,7 @@
 Rozdział 1.
 
 Geralt poznaje tajniki Git'a.
+
+Rozdział 2.
+
+Geralt uczy się pracować z gałęziami.
