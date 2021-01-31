@@ -49,3 +49,25 @@ zakommituj go (pamiętaj o `git add` *PRZED commitem*)
 #### Wizualizacja procesu komitowania i `areas` w Git:
 ![git 3 areas example](https://snipcademy.com/img/articles/git-fundamentals/three-stages-01.svg)
 
+
+
+## III. Podstawy pracy ze zdalnym repozytorium
+
+- Git != GitHub
+- można pracować na zdalnym repo w pojedynkę
+- GitHub służy do wymiany danymi, ale nie jest on "lepszy" od zwykłego członka zespołu - jest takim samym 
+
+### podstawowe komendy - pobieranie / wiązanie repozytorium (robimy 1 raz per repo)
+- `git clone git@github.com:mojaorganizacja/mojerepo.git` - tworzy katalog o nazwie `mojerepo` i kopiuje tam zdalne repozytorium. Robimy **ZAMISAT** `git init`. Istotna różnica - na odmianę od `git init` tworzy nowy katalog, zamiast tworzyć repo w bieżącym.
+- `git remote add origin git@github.com:mojaorganizacja/mojerepo.git` - "wiąże lokalne i zdalne repozytorium". Robimy **PO WCZEŚNIEJSZYM** `git init`. Używane raczej rzadko.
+
+### podstawowe komendy - wymiana danymi ze zdalnym repo (robimy często)
+- `git push` - "wrzuca / wypycha" nasze na repo zdalne
+- `git pull` - "zaciąga / pobiera" zmiany ze zdalnego repo i aktualizuje bieżący branch / HEAD
+- `git fetch` - "zaciąga / pobiera" zmiany ze zdalnego repo bez  aktualizacji bieżącego branch / HEAD
+- `git push origin --set-upstream feature/my-branch`, lub `git push origin -u feature/my-branch`, lub `git push origin -u HEAD` (jeżeli HEAD = feature/my-branch)
+
+### zadanie 3.1
+Pobierz zdalne repozytorium z GitHub, używając polecenia Git clone.
+
+
