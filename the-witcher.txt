@@ -9,3 +9,7 @@ Geralt uczy się pracować z gałęziami.
 Rozdział 3.
 
 rozdział powstał na potrzeby demonstracji `git push`.
+
+Rozdział 4.
+
+Ten z kolei rozdział powstał zdalnie, przez strasznie niewygodny edytor online.
