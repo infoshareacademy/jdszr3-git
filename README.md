@@ -58,7 +58,14 @@ zakommituj go (pamiętaj o `git add` *PRZED commitem*)
 - GitHub służy do wymiany danymi, ale nie jest on "lepszy" od zwykłego członka zespołu - jest takim samym 
 
 ### podstawowe komendy - pobieranie / wiązanie repozytorium (robimy 1 raz per repo)
-- `git clone git@github.com:mojaorganizacja/mojerepo.git` - tworzy katalog o nazwie `mojerepo` i kopiuje tam zdalne repozytorium. Robimy **ZAMISAT** `git init`. Istotna różnica - na odmianę od `git init` tworzy nowy katalog, zamiast tworzyć repo w bieżącym.
+
+**Ważne**: z dwóch poniższych poleceń robimy zwykle jedno - albo git init, albo git clone.
+
+Init + remote add origin - kiedy tworzymy nowe repo lokalnie (rzadko)
+
+Clone - kiedy chcemy, aby na naszym lokalnym urządzeniu pojawiło się już istniejące, wcześniej stworzone repo.
+
+- `git clone git@github.com:mojaorganizacja/mojerepo.git` - tworzy katalog o nazwie `mojerepo` i kopiuje tam zdalne repozytorium. Robimy **ZAMIAST** `git init`. Istotna różnica - na odmianę od `git init` tworzy nowy katalog, zamiast tworzyć repo w bieżącym.
 - `git remote add origin git@github.com:mojaorganizacja/mojerepo.git` - "wiąże lokalne i zdalne repozytorium". Robimy **PO WCZEŚNIEJSZYM** `git init`. Używane raczej rzadko.
 
 ### podstawowe komendy - wymiana danymi ze zdalnym repo (robimy często)
