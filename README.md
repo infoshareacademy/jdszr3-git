@@ -169,18 +169,42 @@ Pobierz zdalne repozytorium z GitHub, używając polecenia Git clone.
 
 **Działanie**
 `git merge` - git tworzy nowy commit, który zawiera nasze zmiany i zmiany z innego brancha.
-`git rebase` - git zmienia nam podstawowy commit, z którego wychodzi nasz branch
+`git rebase` - git zmienia nam podstawowy commit, z którego wychodzi nasz obecny branch
 
-## VI. Konfiguracja edytora tekstu do GIT-a
+**UWAGA**
+- podczas wykonywania operacji merge mogą pojawić się `konflikty`. Występują one, gdy w obu wersjach branchy nastąpiły zmiany w tym samym pliku.
 
-## VII. Dobre praktyki przy opisywaniu zmian.
+## Zadanie 5.1 
+- Stwórzmy nowy branch `git branch feature/merge`
+- Stwórzmy nowy plik `fileA.txt`. Dodaj losowy tekst do pliku.
+- Przełączmy się do brancha master `git checkout master`
+- Wykonajmy operację merge z wcześniej dodanym branchem `git merge feature/merge`
+- Zaobserwujmy co się stało.
+
+## Zadanie 5.2
+- Upewnij się że jesteś na branchu master
+- Utwórz branch `feature/rebase`
+- Utwórz plik `plikA.txt` i wykonaj operację commit z wiadomością `Added plikA` oraz plik B i wykonaj operację commit z wiadomością `Added plikB`
+- Przełącz się na branch master
+- Utwórz plik `plikC.txt` i wykonaj operację commit z wiadomością `Added plikC`.
+- Przełącz się na branch feature/rebase.
+- Przeprowadź operację rebase do mastera `git rebase master`
+
+## Zadanie 5.3
+- Stwórzmy nowy branch `git branch feature/conflicts`
+- Stwórzmy nowy plik `conflictedFile.txt` i wpiszmy tekst `Nie ma konfliktów`. Wykonajmy operację commit.
+- Stwórzmy nowy branch `git branch feature/conflicts2`
+- Dokonajmy zmiany w pliku `conflictedFile.txt` - wpiszmy tekst `Będą konflikty`. Wykonajmy operację commit
+- Przełąz się na branch `feature/conflicts` i wykonaj operację `merge` z brancha `feature/conflicts2`.
+
+## VI. Dobre praktyki przy opisywaniu zmian.
 - Dzielimy komentarz na tytuł oraz treść
 - Krótki i zwięzły tytuł
 - Zdania zaczynamy wielką literą
 - Tytuł - zdania w trybie rozkazującym
 - Komentarz powinien być lakoniczny i opisywać gdzie wykonano zmiany i dlaczego.
 
-### Zadanie 7.1
+### Zadanie 6.1
 - Wejdź do swojego repozytorium.
 - Dodaj plik `firstFile.txt`. Napisz dwa zdania i zapisz go.
 - Zrób `git add .` następnie `git commit` 
@@ -190,7 +214,35 @@ Pobierz zdalne repozytorium z GitHub, używając polecenia Git clone.
 
 https://chris.beams.io/posts/git-commit/
 
-## VIII. Pull request
+## VII. Pull request
+### Idea pull requestów:
+- Wąskie grono osób z uprawnieniami zapisu
+- Kontrola nad wchodzącymi zmianami
+- Przeglądanie i ocena kodu
+- Testowanie automatyczne
 
-## IX. Q&A - Praktyka pracy z GITem 
+### Flow:
+- Kopia repozytorium znajduje się na koncie użytkownika
+- Dowolnie możemy manewrować zmianami
+- Przygotowujemy zmianę i pushujemy do Githuba.
+- Pull request trafia do autora projektu źródłowego
+- Od polityki autora zależy dalszy los wprowadzonej zmiany
+- Github pozwala prowadzić dyskusję nad Pull Requestem.
+
+### Zadanie 7.1 Tworzymy pierwszy pull request:
+
+## VIII. Q&A - Praktyka pracy z GITem
+
+**Istnieją różne GUI do zarządzania Gitem:**
+- TortoiseGit
+- GitKraken
+- Github GUI
+- Bitbucket GUI
+
+**Nie tylko github!**
+- Gitlab
+- Bitbucket
+- A może własne repozytorium git na swoim domowym serwerze?
+
+### Pytania od kursantów? :)
 
