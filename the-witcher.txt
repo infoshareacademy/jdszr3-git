@@ -13,3 +13,7 @@ rozdział powstał na potrzeby demonstracji `git push`.
 Rozdział 4.
 
 Ten z kolei rozdział powstał zdalnie, przez strasznie niewygodny edytor online.
+
+Rozdział 5.
+
+Zadanie 3.2 zostalo wykonane. Zobaczysz wlasnie moje zmiany.
