@@ -1,11 +1,11 @@
 Rozdział 1.
 
 Geralt poznaje tajemnice Git'a.
-
 Rozdział 2.
 
 Geralt uczy się pracować z gałęziami.
 
+Geralt dziś ma kaca
 Rozdział 3.
 
 rozdział powstał na potrzeby demonstracji `git push`.
