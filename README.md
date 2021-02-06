@@ -177,6 +177,7 @@ Pobierz zdalne repozytorium z GitHub, używając polecenia Git clone.
 ## Zadanie 5.1 
 - Stwórzmy nowy branch `git branch feature/merge`
 - Stwórzmy nowy plik `fileA.txt`. Dodaj losowy tekst do pliku.
+- Wykonaj operację `add` i `commit`.
 - Przełączmy się do brancha master `git checkout master`
 - Wykonajmy operację merge z wcześniej dodanym branchem `git merge feature/merge`
 - Zaobserwujmy co się stało.
@@ -191,6 +192,7 @@ Pobierz zdalne repozytorium z GitHub, używając polecenia Git clone.
 - Przeprowadź operację rebase do mastera `git rebase master`
 
 ## Zadanie 5.3
+- Na branchu `master` stwórz plik `konflikty.txt`
 - Stwórzmy nowy branch `git branch feature/conflicts`
 - Stwórzmy nowy plik `conflictedFile.txt` i wpiszmy tekst `Nie ma konfliktów`. Wykonajmy operację commit.
 - Stwórzmy nowy branch `git branch feature/conflicts2`
