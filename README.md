@@ -119,4 +119,78 @@ Pobierz zdalne repozytorium z GitHub, używając polecenia Git clone.
 - Zrób `git push origin -u feature/zadanie-3.3-nazwisko` (pilnuj poprawności nazwy branch), lub `git push origin -u HEAD` (pro-tip, żeby mniej wpisywać :) )
 - Zaobserwuj, że na GitHub pojawił się nowy branch
 
+## IV. Przywracanie zmian w GIT
+- Bardzo przydatna funkcjonalność GITa przy pracy zespołowej
+
+### Podstawowe komendy:
+`git checkout` - zamienia wskaźnik HEAD na wskazany commit lub branch. 
+
+`git revert` - odwraca zmiany do wybranego momentu i zapisuje je jako nowy commit
+
+`git reset` - przywraca zmiany w repo do wybranego momentu z historią włącznie.
+
+**Po zadaniach wyciągniemy wnioski!** 
+
+### Zadanie 4.1.
+- Na branchu `master` dokonajmy zmian w jednym z istniejących plików. Zapisz zmiany
+- Następnie zapiszmy zmiany za pomocą `git commit -m "Added changes in twojanazwapliku.txt for ex 4.1"
+- Wykonaj ponownie powyższe dwa kroki
+- Przejdziemy teraz do procesu przywracania pliku do stanu sprzed pierwszą edycją. Użyj: `git log --oneline`
+- Po znalezieniu odpowiedniego hashu commita wykonajmy `git checkout [hashId]` 
+- Sprawdź jakie zmiany zostały dokonane `git status`.
+- Wróćmy do stanu początkowego `git checkout master`. Przeniesie nas on do wersji po wykonaniu zmian.
+
+### Zadanie 4.2
+- Na branchu `master` dokonajmy zmian w jednym z istniejących plików. Zapisz zmiany
+- Następnie zapiszmy zmiany za pomocą `git commit -m "Added changes in twojanazwapliku.txt for ex 4.2"
+- Przejdziemy teraz do procesu przywracania pliku do stanu sprzed pierwszą edycją. Użyj: `git log --oneline`
+- Po znaleznieniu odpowiedniego hashu commita wykonajmy `git revert [hashId]`
+- Zostanie stworzony nowy commit. Należy nadać mu tytuł i komentarz.
+- Sprawdźmy stan naszego repozytorium za pomocą `git log --oneline`.
+- Sprawdźmy zawartość naszego repozytorium i wyciągnijmy wnioski.
+
+### Zadanie 4.3
+- Na branchu `master` dokonajmy zmian w jednym z istniejących plików. Zapisz zmiany
+- Następnie zapiszmy zmiany za pomocą `git commit -m "Added changes in twojanazwapliku.txt for ex 4.2"
+- Przejdziemy teraz do procesu resetowania repozytorium do stanu sprzed edycją. Użyj `git log --oneline`
+- Po znalezieniu odpowiedniego hashu commita wykonajmy `git reset --hard [hashId]`
+- Sprawdźmy stan naszego repozytorium za pomocą `git status` a następnie `git log --oneline`.
+- Sprawdźmy zawartość naszego repozytorium i wyciągnijmy wnioski.
+
+## Zadanie 4.4 (dla chętnych)
+- Wykonaj zadanie 4.3 dodając do komendy `git reset` parametry `--soft` oraz `--mixed` zamiast `--hard`. Sprawdź jak zachował się git.
+
+## V. Scalanie branchy
+
+### Podastawowe komendy:
+
+`git merge [branch-name]` - dołącza do aktualnego brancha branch, który podamy w parametrze
+`git rebase [branch-name]` - wykonuje operację rebase 
+
+**Działanie**
+`git merge` - git tworzy nowy commit, który zawiera nasze zmiany i zmiany z innego brancha.
+`git rebase` - git zmienia nam podstawowy commit, z którego wychodzi nasz branch
+
+## VI. Konfiguracja edytora tekstu do GIT-a
+
+## VII. Dobre praktyki przy opisywaniu zmian.
+- Dzielimy komentarz na tytuł oraz treść
+- Krótki i zwięzły tytuł
+- Zdania zaczynamy wielką literą
+- Tytuł - zdania w trybie rozkazującym
+- Komentarz powinien być lakoniczny i opisywać gdzie wykonano zmiany i dlaczego.
+
+### Zadanie 7.1
+- Wejdź do swojego repozytorium.
+- Dodaj plik `firstFile.txt`. Napisz dwa zdania i zapisz go.
+- Zrób `git add .` następnie `git commit` 
+- Po wykonaniu komendy `git commit` powinien otworzyć się nam wybrany w zadaniu nr 6 edytor tekstowy.
+- Stwórz wiadomość w następujący sposób: w pierwszej linijce umieść tytuł, zrób jedną linię przerwy, umieść komentarz. Wykonaj wszystko według zasad. Kliknij enter.
+- Po co to wszystko? Wykonaj `git log` a następnie `git log --oneline`
+
+https://chris.beams.io/posts/git-commit/
+
+## VIII. Pull request
+
+## IX. Q&A - Praktyka pracy z GITem 
 
