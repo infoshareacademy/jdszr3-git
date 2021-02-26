@@ -119,6 +119,8 @@ Pobierz zdalne repozytorium z GitHub, używając polecenia Git clone.
 - Zrób `git push origin -u feature/zadanie-3.3-nazwisko` (pilnuj poprawności nazwy branch), lub `git push origin -u HEAD` (pro-tip, żeby mniej wpisywać :) )
 - Zaobserwuj, że na GitHub pojawił się nowy branch
 
+# JDSZR3-Git - część 2
+
 ## IV. Przywracanie zmian w GIT
 - Bardzo przydatna funkcjonalność GITa przy pracy zespołowej
 
@@ -247,4 +249,6 @@ https://chris.beams.io/posts/git-commit/
 - A może własne repozytorium git na swoim domowym serwerze?
 
 ### Pytania od kursantów? :)
+
+# JDSZR3-Git - część 3
 
