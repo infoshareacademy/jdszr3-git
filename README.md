@@ -251,4 +251,50 @@ https://chris.beams.io/posts/git-commit/
 ### Pytania od kursantów? :)
 
 # JDSZR3-Git - część 3
+ 
+### Agenda:
+- Tagi
+- Zadania do samodzielnego rozwiązania
+- Wprowadzenie do Github Desktop.
 
+## IX. Tagi
+
+- Oznaczają dany commit.
+- Często tagujemy commit jako oznaczenie wersji aplikacji.
+- Tag na commicie oznacza zakończenie pracy nad daną wersją aplikacji - tag mówi o wersji.
+- Możemy używać tagów zamiast commitów, aby przełączać wersje kodu. 
+
+### Zadanie 9.1 | Poznajmy tagi.
+- Sprawdź czy twoje repozytorium posiada obecnie tag. Użyj komendy `git tag`
+- Otaguj teraz swoje repozytorium. Aby to zrobić użyj komendy `git tag 1.0`.
+- Sprawdźmy listę naszych commitów za pomocą `git log --oneline`
+- Otagujmy kilka commitów chronologicznie. Użyj komendy `git tag -a [WYBRANA_WERSJA] -m "[JAKAŚ WIADOMOŚĆ]" ` oraz naprzemiennie `git tag [WERSJA]-lw`
+- Sprawdźmy jakie tagi są obecnie dostępne za pomocą komendy `git tag`.
+- Sprawdźmy jakie informacje zawieramy wewnątrz tagów. Użyjmy konmendy `git show [nazwa_tagu]` aby wyświetlić zawartość. Zauważmy - jakie różnice występują w informacji zawartej w tagu dodanym z flagą -a, a bez niej.
+- Usuńmy tagi za pomocą komendy `git tag --delete [NAZWA_TAGU]`. Na potrzeby zadania 9.2 zostawmy dwa z nich.
+
+### Zadanie 9.2 | GitHub a tagi.
+- Do tej pory bazowaliśmy na lokalnym repozytorium. Co się stanie, jeżeli opublikujemy nasze tagi do zdalnego repozytorium? Aby opublikować nasze tagi wykonaj komendę `git push origin --tags`.
+- Po wykonaniu operacji push wejdźmy do repozytorium. Znajdźmy nasze tagi.
+- Korzystając z Githuba na bazie tagu możemy stworzyć release - w "języku informatycznym" jest to oficjalna wersja naszego kodu, który obecnie działa produkcyjnie.
+
+## X. WorkFlow:
+- Tworzymy branch.
+- Po dodaniu/usunięciu/edycji pliku dodajemy commity
+- Wystawiamy pull request w dowolnym momencie procesu, aby prowadzić dyskusję na temat wprowadzanych zmian.
+- Po akceptacji zmian wykonujemy operację merge do brancha main.
+
+## XI. Zadania do wykonania
+
+1. Stwórz własne publiczne repozytorium na githubie. Upewnij się, że partner ma dostęp do repozytorium.
+2. Zapełnij repozytorium kilkoma plikami tekstowymi. Opublikuj repozytorium. Otaguj branch main.
+3. Stwórz branch o nazwie zgodnej z workflow. Dokonaj zmian i opublikuj branch. Następnie przełącz się na repozytorium partnera. Przełącz się na stworzony przez niego branch i dokonaj tam zmian. Opublikuj zmiany i wystaw pull request na repozytorium partnera. Zaakceptujcie nawzajem swoje pull requesty. Otagujcie najnowsze zmiany i opublikujcie tagi
+4. Ściągnijcie nawzajem w jednym momencie swoje repozytoria na branchu master. Wykonajcie zmiany w tych samych plikach. Opublikujcie zmiany najpierw w nieswoim repozytorium. Następnie spróbujcie opublikować zmiany w swoim repozytorium. Rozwiążcie konflikty i opublikujcie zmiany. Otagujcie najnowsze zmiany i opublikujcie tagi.
+5. Pracujecie na jednym repozytorium. Stwórzcie dwa niezależne branche i wykonajcie zmiany na plikach - zmiany wykonajcie w tym samym pliku oraz w różnych. Opublikujcie zmiany i wystawcie pull requesty. Zaakceptujcie pull requesty. Jeżeli wystąpią konflikty, rozwiążcie je. Wynikiem finalnym zadania.
+
+- https://learngitbranching.js.org/ : PRAKTYKA!
+
+## XII. Github Desktop.
+
+- Instalacja: https://desktop.github.com/
+- GUI ku ułatwieniu pracy z gitem.
