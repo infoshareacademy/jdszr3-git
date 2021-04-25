@@ -175,6 +175,7 @@ Pobierz zdalne repozytorium z GitHub, używając polecenia Git clone.
 
 **UWAGA**
 - podczas wykonywania operacji merge mogą pojawić się `konflikty`. Występują one, gdy w obu wersjach branchy nastąpiły zmiany w tym samym pliku.
+- Komenda `git log --merge --left-right -p` pokaże nam, skąd pochodzą konflikty
 
 ## Zadanie 5.1 
 - Stwórzmy nowy branch `git branch feature/merge`
@@ -301,3 +302,8 @@ https://chris.beams.io/posts/git-commit/
 
 - Instalacja: https://desktop.github.com/
 - GUI ku ułatwieniu pracy z gitem.
+
+## XIII. Tortoise Git
+
+- https://tortoisegit.org/download/
+Do zapoznania się z GUI i użytecznością programu tortoise git.
