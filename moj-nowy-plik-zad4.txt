@@ -1,5 +1,1 @@
 Moj nowy plik zadanie czwarte pkt pierwszy
-
-Tej zmiany nie będzie po wykonaniu komendy checkout:)
-
-Testujemy komendę revert. Ten tekst zniknie. Ale nie na zawsze.
