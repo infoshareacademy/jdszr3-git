@@ -212,9 +212,12 @@ Pobierz zdalne repozytorium z GitHub, używając polecenia Git clone.
 - Wejdź do swojego repozytorium.
 - Dodaj plik `firstFile.txt`. Napisz dwa zdania i zapisz go.
 - Zrób `git add .` następnie `git commit` 
-- Po wykonaniu komendy `git commit` powinien otworzyć się nam wybrany w zadaniu nr 6 edytor tekstowy.
+- Po wykonaniu komendy `git commit` powinien otworzyć się nam edytor tekstowy.
 - Stwórz wiadomość w następujący sposób: w pierwszej linijce umieść tytuł, zrób jedną linię przerwy, umieść komentarz. Wykonaj wszystko według zasad. Kliknij enter.
 - Po co to wszystko? Wykonaj `git log` a następnie `git log --oneline`
+
+Do sprawdzenia:
+`git log --graph --decorate --all --oneline`
 
 https://chris.beams.io/posts/git-commit/
 
