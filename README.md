@@ -298,12 +298,30 @@ https://chris.beams.io/posts/git-commit/
 
 - https://learngitbranching.js.org/ : PRAKTYKA!
 
-## XII. Github Desktop.
+## XII. Git stash.
 
-- Instalacja: https://desktop.github.com/
-- GUI ku ułatwieniu pracy z gitem.
+- Wykorzystujemy gdy pilnie chcemy przejsc do innego zadania.
+- Stash - to schowek w GIT
+- Stash pomaga zoptymalizowac prace, gdy pilnie chcemy zmienic zadanie
+- Nie warto stashowac zbyt duzo rzeczy, poniewaz tworzy sie balagan :) tj. konflikty
+- Wrzuca zmiany do schowka, ale dotyczy tylko plikow "ztrackowanych"
+
+`git stash`
+`git stash list`
+`git stash pop`
 
 ## XIII. Tortoise Git
 
 - https://tortoisegit.org/download/
 Do zapoznania się z GUI i użytecznością programu tortoise git.
+
+## XIV. Ciekawe komendy gita.
+`git commit --amend` - edytuje zawartosc ostatniego commita 
+
+`git rebase -i HEAD~N` - pozwala na edycje N ostatnich commitow
+
+
+## XV. 
+
+Praktyka czyni mistrza :)
+https://gitexercises.fracz.com/
