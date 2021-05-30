@@ -1,5 +1,3 @@
-Rozdział 1.
-
 Geralt poznaje tajemnice Git'a.
 Rozdział 2.
 
